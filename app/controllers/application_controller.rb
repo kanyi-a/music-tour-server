@@ -9,10 +9,15 @@ class ApplicationController < Sinatra::Base
       user: { only: [:username, :nickname] }})
   end
 
-  get '/user' do
-    user = User.first
-    user.to_json(include: :events)
-  end
+  get '/users' do
+    users = User.all
+    users.to_json(include: :event)
+   end
+
+   get '/user/:id' do
+     users = User.find(params[:id])
+     users.to_json(include: :event)
+   end
 
   get '/venues' do 
     venues = Venue.all
