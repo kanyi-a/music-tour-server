@@ -27,6 +27,8 @@ gem "rake"
 
 gem 'psych', '~> 4.0.0'
 
+gem 'pg'
+
 #Require all files in a folder
 gem "require_all"
 
@@ -42,8 +44,4 @@ group :development do
   # Automatically reload when there are changes
   # https://github.com/alexch/rerun
   gem "rerun"
-end
-
-group :production do
-    gem "pg"
 end
