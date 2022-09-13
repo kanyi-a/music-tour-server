@@ -78,7 +78,7 @@ get '/most-popular' do
 
  get '/busy-bee' do
    user = User.busy_beaver
-   user.to_json
+   user.to_jsonn
  end
 
 end
